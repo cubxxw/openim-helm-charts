@@ -30,9 +30,11 @@ jobs:
   action:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Chart Testing
+        uses: helm/chart-testing-action@v2.4.0
       - uses: dessant/lock-threads@v4
         with:
-          github-token: ${{ secrets.BOT_GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-inactive-days: '365'
           exclude-issue-created-before: ''
           exclude-issue-created-after: ''
