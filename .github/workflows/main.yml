@@ -8,6 +8,15 @@ jobs:
   lock:
     runs-on: ubuntu-latest
     steps:
+      - name: Change permissions
+  run: chmod +x ./scripts/helm-docs.sh
+
+- name: Change permissions
+      run: chmod +x ./scripts/helm-docs.sh
+
+      - name: Change permissions
+        run: chmod +x ./scripts/helm-docs.sh
+
       - name: Lock Threads
         uses: dessant/lock-threads@v4
         with:
